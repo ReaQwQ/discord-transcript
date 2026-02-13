@@ -1,4 +1,5 @@
-import { Transcripter } from '../index';
+#!/usr/bin/env node
+import { Transcripter } from './index';
 import * as fs from 'fs';
 import * as path from 'path';
 

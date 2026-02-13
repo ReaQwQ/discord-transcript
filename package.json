@@ -1,15 +1,21 @@
 {
-  "name": "transcript",
+  "name": "discord-transcript-v1",
   "version": "1.0.0",
-  "description": "",
+  "description": "A standalone Discord transcript generator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "discord-transcript": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "tsc",
-    "build:file": "npm run build && pkg dist/examples/example-cli.js --targets node18-win-x64 --output transcript-cli",
-    "start:env": "ts-node src/examples/example-env.ts",
-    "start:cli": "ts-node src/examples/example-cli.ts",
-    "test": "npm run start:env"
+    "compile": "tsc",
+    "build": "npm run compile && pkg dist/cli.js --targets node18-win-x64 --output transcript",
+    "start": "ts-node src/cli.ts"
   },
   "keywords": [],
   "author": "",

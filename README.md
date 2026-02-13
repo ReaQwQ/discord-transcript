@@ -48,23 +48,24 @@ async function generate() {
 generate();
 ```
 
-### CLI Usage (Standalone Executable)
+### CLI Usage
 
-If you have built the executable (`npm run build:file`):
+You can use the built executable or run the script directly.
+
+#### Run with Arguments
 
 ```bash
-./transcript-cli.exe --token "YOUR_TOKEN" --guildId "123..." --channelId "456..."
+# Development
+npm run start -- --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
+
+# Built Executable (after npm run build)
+./transcript.exe --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
 ```
 
-## Configuration
-
-You can configure the fetch limit using options:
-
-```typescript
-const transcript = new Transcripter(token, {
-    fetchLimit: 500 // Limit to 500 messages (Default: Infinity)
-});
-```
+Arguments:
+- `--token`: Your Discord Bot Token
+- `--guildId`: Target Guild ID
+- `--channelId`: Target Channel ID
 
 ## Development
 
@@ -74,39 +75,23 @@ const transcript = new Transcripter(token, {
    npm install
    ```
 
-2. **Setup .env**
-   Copy `.env.example` (if exists) or create `.env`:
-   ```env
-   DISCORD_TOKEN=...
-   GUILD_ID=...
-   CHANNEL_ID=...
+2. **Run CLI (Dev)**
+   ```bash
+   npm run start -- --token "..." --guildId "..." --channelId "..."
    ```
 
-3. **Run Examples**
-   - **Env Mode**: Uses `.env` variables.
-     ```bash
-     npm run start:env
-     ```
-   - **CLI Mode**: Uses arguments.
-     ```bash
-     npm run start:cli -- --token "..." --guildId "..." --channelId "..."
-     ```
-
-4. **Build**
+3. **Build Executable**
    ```bash
    npm run build
    ```
-
-5. **Package (exe)**
-   ```bash
-   npm run build:file
-   ```
+   This will create `transcript.exe` (Windows).
 
 ## Structure
 
 - `src/core`: Main logic (`Transcripter`, `TranscriptData`)
 - `src/types`: Discord API Types
 - `src/generator`: HTML generation logic (`render`, `styles`, `utils`)
+- `src/cli.ts`: CLI entry point
 
 ## License
 
