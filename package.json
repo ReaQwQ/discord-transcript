@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "discord-transcript": "./dist/cli.js"
+    "discord-transcript": "./dist/example.js"
   },
   "files": [
     "dist",
@@ -14,8 +14,8 @@
   ],
   "scripts": {
     "compile": "tsc",
-    "build": "npm run compile && pkg dist/cli.js --targets node18-win-x64 --output transcript",
-    "start": "ts-node src/cli.ts"
+    "build": "npm run compile && pkg dist/example.js --targets node18-win-x64 --output transcript",
+    "start": "ts-node src/example.ts"
   },
   "keywords": [],
   "author": "",
