@@ -1,4 +1,4 @@
-# discord-transcript-v1
+# discord-transcript
 
 **A standalone tool to generate Discord transcripts.**
 It creates HTML files from Discord channels. It does not use `discord.js`.
@@ -21,9 +21,9 @@ It creates HTML files from Discord channels. It does not use `discord.js`.
 ## 📦 Installation
 
 ```bash
-npm install discord-transcript-v1
+npm install discord-transcript
 # or
-yarn add discord-transcript-v1
+yarn add discord-transcript
 ```
 
 ## 🚀 Usage
@@ -33,7 +33,7 @@ yarn add discord-transcript-v1
 You can use this in your Node.js code:
 
 ```typescript
-import { Transcripter } from 'discord-transcript-v1';
+import { Transcripter } from 'discord-transcript';
 
 async function generate() {
     // 1. Setup with your Bot Token
@@ -57,7 +57,7 @@ generate();
 You can use the command line tool without installing it globally:
 
 ```bash
-npx discord-transcript-v1 --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
+npx discord-transcript --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
 ```
 
 **Arguments:**
