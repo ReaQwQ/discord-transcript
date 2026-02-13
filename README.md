@@ -57,7 +57,7 @@ generate();
 You can use the command line tool without installing it globally:
 
 ```bash
-npx discord-transcript --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
+npx @reaqwq/discord-transcript --token "YOUR_TOKEN" --guildId "GUILD_ID" --channelId "CHANNEL_ID"
 ```
 
 **Arguments:**
