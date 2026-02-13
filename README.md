@@ -21,9 +21,9 @@ It creates HTML files from Discord channels. It does not use `discord.js`.
 ## 📦 Installation
 
 ```bash
-npm install discord-transcript
+npm install @reaqwq/discord-transcript
 # or
-yarn add discord-transcript
+yarn add @reaqwq/discord-transcript
 ```
 
 ## 🚀 Usage
@@ -33,7 +33,7 @@ yarn add discord-transcript
 You can use this in your Node.js code:
 
 ```typescript
-import { Transcripter } from 'discord-transcript';
+import { Transcripter } from '@reaqwq/discord-transcript';
 
 async function generate() {
     // 1. Setup with your Bot Token
